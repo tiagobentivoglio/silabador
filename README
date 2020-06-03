@@ -1,0 +1,9 @@
+Silabador do Português v.1 - Tiago Bentivoglio
+
+Separador de sílabas usando Regex totalmente adaptado para a Língua Portuguesa.
+O programa também classifica as palavras de acordo com a tonicidade (oxítona, paroxítona, proparoxítona).
+
+Projeto criado com fins pedagógicos.
+
+Aceito sugestões! 
+contato: tiago.bentivoglio@gmail.com
