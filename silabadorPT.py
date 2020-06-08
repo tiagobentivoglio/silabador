@@ -9,18 +9,20 @@ def silabador(palavra):
     r_silabasPT = r"(?:ch|nh|lh|gu|qu|ss|ps|^cu(?=i(?!m))|^mu(?=i)|" \
                   r"[mnzskjhx]|[fpbvtdcçrg][lr]?|[lr])?" \
                   r"(?:" \
-                  r"[ieaoíéêáâãóõô][iu][iu]?" \
+                  r"[ieaoíéêáâãóõô][iu](?![iu])[iu]?" \
                   r"|[u(i)?]" \
                   r"|[áãâ][eo]" \
                   r"|[õó][e]" \
                   r"|[ieaouíéêáâãóõôúü]" \
                   r")" \
                   r"(?:(?:" \
-                  r"(?:(?:n(?!h)|d|m|t|z|x|p(?![slr])|b(?![rl])|g[?!rl])s?(?![ieaouíéêáâãóõôúü]))" \
+                  r"(?:(?:n(?!h)|d(?![rl])|m|t(?![lr])|z|x|p(?![slr])" \
+                  r"|b(?![rl])|g[?!rl])s?(?![ieaouíéêáâãóõôúü]))" \
                   r"|(?:(?:i$)(?![ieaouíéêáãâóõôúüs]))" \
                   r"|(?:(?:s)(?![ieaouíéêáãâóõôúüs]))" \
                   r"|(?:(?:l)(?![hieaouíéêáãâóõôúü]))" \
                   r"|(?:(?:r)(?![rieaouíéêáâãóõôúü]))" \
+                  r"|(?:(?:f)(?![rieaouíéêáâãóõôúü]))" \
                   r"))?"
     return  re.findall(r_silabasPT, palavra.lower())
 
